@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 03, 2022 at 09:35 PM
+-- Generation Time: Dec 02, 2022 at 09:50 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -77,7 +77,7 @@ INSERT INTO `event` (`id`, `name`, `date`, `time`, `description`, `image`, `capa
 (9, 'The Weltmuseum', '2023-10-30', '17:00:00', 'Dance your way into a host of museums under a silvery moon, starry sky, or dark blanket of night fog (depending on the autumn weather Vienna throws at you) in this annual evening of museum festivities.', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1TisLTxbskflcPKoa-D-7_ss19yvpwWCxLA&usqp=CAU', 100, 'museum@gmail.at', '01 454 454', 'Heldenplatz\r\n1010 Vienna, Austria', 'https://www.weltmuseumwien.at/en/', 'Museum'),
 (10, 'The Esperanto Museum', '2023-10-30', '17:00:00', 'Dance your way into a host of museums under a silvery moon, starry sky, or dark blanket of night fog (depending on the autumn weather Vienna throws at you) in this annual evening of museum festivities.', 'https://www.esperanto.at/wp-content/uploads/sites/2/2021/12/19_esperantomuseum_mg-768x512.jpg', 100, 'museum@gmail.at', '01 454 454', 'Herrengasse 9, 1010 Wien', 'https://www.esperanto.at/evento_at/esperanto-museum-in-wien/', 'Museum');
 
--- --------------------------------------------------------
+
 
 --
 -- Table structure for table `messenger_messages`
