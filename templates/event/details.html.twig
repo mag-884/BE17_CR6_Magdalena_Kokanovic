@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+	<div class="card mb-3">
+
+
+		<img src="{{event.image}}" class="card-img-top" sizes="100px" alt="...">
+
+
+		<div class="card-img-top">
+
+
+			<div class="card-body">
+
+				<p class="card-text">Event’s name: {{event.name}}</p>
+                
+
+				<p class="card-text">Event’s date and start time: 	{{event.date|date('F j, Y')}} at {{event.time|date('g:i a')}}</p>
+
+
+				<p class="card-text">Event’s description: {{event.description}}</p>
+
+
+				<p class="card-text">Event’s capacity: {{event.capacity}}</p>
+
+
+				<p class="card-text">Event’s contact e-mail: {{event.getContactEmail}} </p>
+
+
+				<p class="card-text">Event’s contact phone number: {{event.getContactPhone}} </p>
+
+
+				<p class="card-text">Event’s address: {{event.address}}</p>
+
+
+				<p class="card-text">Event’s URL: {{event.url}}</p>
+
+                <p class="card-text">Event’s type: {{event.type}}</p>
+
+
+			
+
+
+			</div>
+		{% endblock %}

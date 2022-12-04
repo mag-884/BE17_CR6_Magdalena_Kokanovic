@@ -1,0 +1,100 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Vienna Events
+{% endblock %}
+
+
+{% block body %}
+
+	{% for message in app.flashes('notice') %}
+		<div class="alert alert-success">
+			{{ message }}
+		</div>
+	{% endfor %}
+	<style>
+		.example-wrapper {
+			margin: 1em auto;
+			max-width: 800px;
+			width: 95%;
+			font: 18px / 1.5 sans-serif;
+		}
+		.example-wrapper code {
+			background: #F5F5F5;
+			padding: 2px 6px;
+		}
+	</style>
+
+	<header>
+
+		<!-- Background image -->
+		<div class="p-5 text-center bg-image" style="
+																																				      background-image: url('https://www.specialevents.com/sites/specialevents.com/files/styles/article_featured_retina/public/50_Top_2018_Index_Bangkok_CountdownCentral_World_0.jpg?itok=vTfQOKWZ');
+																																				      height: 400px;
+																																				    ">
+			<div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+				<div class="d-flex justify-content-center align-items-center h-100">
+					<div class="text-white">
+						<br>
+						<h4 class="mb-3">Wecome to "Vienna Events"</h4>
+						<br>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Background image -->
+
+	</header>
+
+	<body>
+
+
+		<br>
+		<h2 style="text-align:center;">
+
+			<i>Our offerings</i>
+
+
+		</h2>
+		<br>
+		<div class="row row-cols-1 row-cols-md-3 g-4">
+			{% for event in events %}
+				<div class='col'>
+					<div class='card h-100'>
+						<img src='{{event.image}}' class='card-img-top' alt='...'>
+						<div class='card-body'>
+							<h5 class='card-title'>{{event.name}}</h5>
+							<p class='card-text'>
+								<td>
+									Date:
+									{{event.date|date('F j, Y')}}
+								</td>
+								<br/>
+								Time:
+								{{event.time|date('g:i a')}}
+								<td></td>
+								<hr/>
+							</p>
+						</div>
+						<div class='card-footer'>
+							<td>
+								<a href="/edit/{{event.id}}">
+									<button class='btn btn-primary btn-sm' type='button'>Edit</button>
+								</a>
+								<a href="/delete/{{event.id}}">
+									<button class='btn btn-danger btn-sm' type='button'>Delete</button>
+								</a>
+								<a href="/details/{{event.id}}">
+									<button class='btn btn-warning btn-sm' type='button'>Details</button>
+								</a>
+							</td>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+
+	</body>
+
+
+{% endblock %}
